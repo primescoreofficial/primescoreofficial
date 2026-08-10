@@ -12,6 +12,7 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mon
 const caveat = Caveat({ subsets: ['latin'], variable: '--font-caveat' })
 
 const GA_ID = 'G-0VV0R0ELZS'
+const CLARITY_ID = 'y063uog05n'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.primescore.in'),
@@ -198,6 +199,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${GA_ID}', { page_path: window.location.pathname });
+        `}</Script>
+
+        {/* Microsoft Clarity */}
+        <Script id="microsoft-clarity" strategy="afterInteractive">{`
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "${CLARITY_ID}");
         `}</Script>
 
         <Preloader />
