@@ -11,8 +11,8 @@ const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-outfit' })
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
 const caveat = Caveat({ subsets: ['latin'], variable: '--font-caveat' })
 
-const GA_ID = 'G-0VV0R0ELZS'
-const CLARITY_ID = 'y063uog05n'
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-0VV0R0ELZS'
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID || 'y063uog05n'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.primescore.in'),
