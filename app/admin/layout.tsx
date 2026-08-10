@@ -32,7 +32,6 @@ const NAV_ITEMS = [
   { name: 'Blog Editor',       path: '/admin/blog-editor',        icon: BookOpen,        roles: ['super_admin', 'manager', 'writer'] },
   { name: 'Leads CRM',         path: '/admin/leads',              icon: Contact,         roles: ['super_admin', 'manager', 'sales'] },
   { name: 'Commercial Leads',  path: '/admin/commercial-leads',   icon: Building2,       roles: ['super_admin', 'manager', 'sales'] },
-  { name: 'Dashboard Wishlist', path: '/admin/dashboard-wishlist', icon: Users,           roles: ['super_admin', 'manager', 'sales'] },
   { name: 'Careers',           path: '/admin/careers',            icon: Briefcase,       roles: ['super_admin', 'manager'] },
   { name: 'Credentials',       path: '/admin/credentials',        icon: Award,           roles: ['super_admin', 'manager'] },
   { name: 'Analytics',         path: '/admin/analytics',          icon: BarChart3,       roles: ['super_admin', 'manager', 'analyst'] },
