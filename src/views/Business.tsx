@@ -370,7 +370,7 @@ function CommercialCapabilitiesGrid() {
               </h1>
               
               <p className="text-sm sm:text-lg text-slate-200 mb-8 leading-relaxed font-normal [text-shadow:0_1px_6px_rgba(0,0,0,0.4)]">
-                Primescore's commercial audit desk reviews your CCR, disputes bureau errors, reconciles bank records, and monitors supplier credit risk — all under a single transparent engagement fee.
+                Your company's credit record shapes every deal you make. Primescore reviews your CCR, corrects bureau errors, reconciles bank data, and monitors supplier risk — end to end, under one honest fee.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">

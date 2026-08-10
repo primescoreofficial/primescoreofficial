@@ -140,7 +140,7 @@ const WHY_US = [
 const PROCESS_STEPS = [
   { n: '01', title: 'Submit Inquiry', body: 'Fill our commercial audit request form. Our team reviews your company profile within 2 hours.' },
   { n: '02', title: 'CCR & Report Pull', body: 'We obtain your Company Credit Report from CIBIL and CRIF, plus director-level bureau pulls.' },
-  { n: '03', title: 'Error Identification', body: 'Our analysts map duplicate lines, PAN mismatches, incorrect account classifications, and registry errors.' },
+  { n: '03', title: 'Error Identification', body: 'Our team maps every discrepancy in your report: duplicate account lines, PAN mismatches, incorrect account classifications, and registry errors — nothing gets missed.' },
   { n: '04', title: 'Dispute Filing', body: 'Formal dispute documentation is compiled and submitted to the relevant bureaus and banks on your behalf.' },
   { n: '05', title: 'Ongoing Monitoring', body: 'Monthly and quarterly reports are delivered for the duration of your plan. We flag new issues proactively.' },
 ]

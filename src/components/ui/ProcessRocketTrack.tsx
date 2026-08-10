@@ -31,7 +31,7 @@ const PROCESS_STEPS = [
   {
     step: '03',
     title: 'Error Identification',
-    description: 'Our analysts map duplicate lines, PAN mismatches, incorrect account classifications, and registry errors.',
+    description: 'Our team maps every discrepancy in your report: duplicate account lines, PAN mismatches, incorrect account classifications, and registry errors — nothing gets missed.',
     iconTag: 'Audit Desk',
     icon: FileCheck
   },
