@@ -346,7 +346,7 @@ export const faqs: FAQ[] = [
   },
   {
     q: 'How long does credit rectification take?',
-    a: 'Simple disputes are often resolved within 30 to 45 days, while complex cases involving banks, settlements, or written-off accounts may take 60 to 90 days.',
+    a: 'Dispute resolution timelines depend on bank verification speed and credit bureau processing cycles. PrimeScore expedites legal dispute filings with all 4 bureaus to ensure fast audit and resolution without unnecessary delay.',
   },
   {
     q: 'Can I check all my credit reports in one place?',

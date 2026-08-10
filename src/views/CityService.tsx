@@ -272,13 +272,13 @@ export default function CityService({ city }: { city?: string }) {
 
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950 border border-emerald-500/30 px-3 py-1 rounded-full">
-              Legal &amp; CICRA Compliant
+              100% Legal &amp; Bureau Compliant
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-3">
               Our 4-Step Credit Rectification Process in {cityName}
             </h2>
             <p className="text-slate-400 text-sm sm:text-base mt-2">
-              Strictly executed under the Credit Information Companies (Regulation) Act.
+              Executed through official credit bureau grievance mechanisms and bank nodal channels.
             </p>
           </div>
 
@@ -386,7 +386,7 @@ export default function CityService({ city }: { city?: string }) {
             {[
               {
                 q: `How long does CIBIL score repair take in ${cityName}?`,
-                a: `Credit rectification typically takes 60 to 90 days. Banks and credit bureaus are legally mandated under CICRA regulations to verify and resolve disputes within 30–45 business days of notice filing.`
+                a: `Dispute resolution timelines depend on bank verification speed and credit bureau processing cycles. PrimeScore files official legal dispute notices directly with bank nodal desks and bureaus to ensure fast audit and resolution without unnecessary delay.`
               },
               {
                 q: 'Can PrimeScore remove "Settled" or "Written-Off" tags?',
