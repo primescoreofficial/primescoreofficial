@@ -342,7 +342,7 @@ function CommercialCapabilitiesGrid() {
     { name: 'Raju Ram Ji', role: 'Bhati Stone Art', text: 'Clear communication and fast turnarounds on dispute documentation. Cleared legacy classification errors from our corporate records.' },
     { name: 'Sandeep Jain', role: 'MS Food Industries', text: 'The 2-hour quick response desk guided us through complete bureau reconciliation. Transparent pricing with zero surprise charges.' },
     { name: 'GK Garg', role: 'Ganpati Steel', text: 'Primescore\'s commercial audit team tracked our bureau dispute status continuously until full resolution. Outstanding support.' },
-    { name: 'Sarang Jain', role: 'LMJ', text: 'Comprehensive 4-bureau monitoring gave us complete visibility into our company credit standing and director score health.' }
+    { name: 'Sarang Jain', role: 'LMJ SERVICES LTD', text: 'Comprehensive 4-bureau monitoring gave us complete visibility into our company credit standing and director score health.' }
   ], [])
 
   return (
