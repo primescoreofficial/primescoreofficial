@@ -40,6 +40,13 @@ export const metadata: Metadata = {
     'prime score financial',
     'primescore fintech private limited'
   ],
+  manifest: '/manifest.json',
+  themeColor: '#0B132B',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'Primescore',
+  },
   icons: {
     icon: '/primescore-logo-tab.png',
     apple: '/primescore-logo-tab.png',
