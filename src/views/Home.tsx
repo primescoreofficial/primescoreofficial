@@ -162,7 +162,7 @@ function ImageToggleSection() {
 
             {/* Headline */}
             <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.08]">
-              Stuck with a low CIBIL score or <span className="text-emerald-400">wrong bank entries?</span>
+              Stuck with a low credit score or <span className="text-emerald-400">wrong bank entries?</span>
             </h2>
 
             {/* Sub copy */}
