@@ -22,6 +22,7 @@ import {
   FileCheck
 } from 'lucide-react'
 
+import emailjs from '@emailjs/browser'
 import { supabase } from '../lib/supabase'
 
 export default function CityService({ city }: { city?: string }) {
@@ -62,7 +63,34 @@ export default function CityService({ city }: { city?: string }) {
       console.warn('Supabase auth/insert warning:', err)
     }
 
-    // 2. Backup post to Google Sheets webhook to guarantee 100% lead capture
+    // 2. Trigger EmailJS Admin Notification & User Email (Same as Contact Form)
+    try {
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+      const templateId = 'template_37a3wfs'
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
+      if (serviceId && publicKey) {
+        const templateParams = {
+          from_name: nameVal.trim(),
+          from_email: `${phoneVal.trim().replace(/\D/g, '')}@citylead.primescore.in`,
+          from_phone: phoneVal.trim(),
+          issue_type: `City Lead (${cityName || 'General'}): ${issueVal}`,
+          preferred_date: new Date().toISOString().split('T')[0],
+          preferred_time: '10:00 AM (City Lead)',
+          message: `New Lead from City Landing Page (${cityName || 'General'}).\nName: ${nameVal.trim()}\nPhone: ${phoneVal.trim()}\nSelected Issue: ${issueVal}`,
+          marketing_opt_in: 'YES',
+          to_name: 'Primescore Support',
+          to_email: 'info@primescore.in',
+        }
+
+        const adminPromise = emailjs.send(serviceId, templateId, templateParams, publicKey)
+        await adminPromise
+      }
+    } catch (emailjsErr) {
+      console.warn('EmailJS city lead trigger notice:', emailjsErr)
+    }
+
+    // 3. Backup post to Google Sheets webhook to guarantee 100% lead capture
     try {
       const sheetWebhookUrl = 'https://script.google.com/macros/s/AKfycbw5YhcVQoyohMfXIMUu7LjuYNLskdNF6ttGScqDk7H3wwPkgfC5y-BMYTivdnn6tZj4Ag/exec'
       await fetch(sheetWebhookUrl, {
