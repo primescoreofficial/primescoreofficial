@@ -44,6 +44,7 @@ export default function Navbar() {
       { to: '/services', label: 'Services' },
       { to: '/pricing', label: 'Pricing' },
       { to: '/business', label: 'B2B Business' },
+      { to: '/partner', label: 'Partners' },
       { to: '/about', label: 'About' },
       { to: '/blog', label: 'Blog' },
       { to: '/contact', label: 'Contact' },
@@ -263,6 +264,7 @@ export default function Navbar() {
               l.to === '/' ? 'Access score tracking and updates' :
               l.to === '/services' ? 'Legal document-backed credit audit' :
               l.to === '/business' ? 'Commercial credit bureau solutions' :
+              l.to === '/partner' ? 'Referral program for DSAs, CAs & Advisors' :
               l.to === '/pricing' ? 'Fixed-fee plans with zero hidden costs' :
               l.to === '/about' ? 'Explore our company history and vision' :
               l.to === '/blog' ? 'Expert credit improvement guidelines' :
