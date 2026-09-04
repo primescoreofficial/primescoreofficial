@@ -185,7 +185,7 @@ export default function Partner() {
         {/* Full-Screen Original SVG Background Layer */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
           <img
-            src="/Primescore Partner Portal.svg"
+            src="/partner-portal-hero.svg"
             alt="Primescore Partner Referral Portal"
             className="w-full h-full object-cover object-center lg:object-right"
           />

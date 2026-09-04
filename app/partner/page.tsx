@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Partner with Primescore — Referral Platform for DSAs, CAs & Advisors',
     description: 'Turn your client leads into instant gift cards with live case tracking.',
-    images: [{ url: '/Primescore Partner Portal.svg', width: 1200, height: 630, alt: 'Primescore Partner Portal' }],
+    images: [{ url: '/partner-portal-hero.svg', width: 1200, height: 630, alt: 'Primescore Partner Portal' }],
   },
 }
 
