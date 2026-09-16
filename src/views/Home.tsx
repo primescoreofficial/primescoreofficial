@@ -672,6 +672,9 @@ export default function Home() {
 
 
 
+      {/* ═══ DASHBOARD PROMO (PEEKING UI SHOWCASE WITH SMOOTH 3D SCROLL-TIED TILT) ═══ */}
+      <DashboardPeekingSection />
+
       {/* ═══ IMAGE TOGGLE SHOWCASE SECTION (DARK NAVY WITH GREEN MARQUEE) ═══ */}
       <ImageToggleSection />
 
@@ -679,9 +682,6 @@ export default function Home() {
       <div data-theme="dark">
         <FeatureScrollShowcase />
       </div>
-
-      {/* ═══ DASHBOARD PROMO (PEEKING UI SHOWCASE WITH SMOOTH 3D SCROLL-TIED TILT) ═══ */}
-      <DashboardPeekingSection />
 
       {/* ═══ SERVICES ═══ */}
       <section className="py-24 sm:py-32 bg-[#F1F7FF] relative overflow-hidden" id="services" data-theme="light">

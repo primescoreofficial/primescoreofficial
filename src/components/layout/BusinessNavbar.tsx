@@ -21,7 +21,7 @@ export default function BusinessNavbar() {
       <div className="mx-auto max-w-[1280px] px-6 sm:px-8 h-20 flex items-center justify-between">
         
         {/* Left Logo block */}
-        <Link href="/business" className="flex items-center gap-2.5 shrink-0">
+        <Link href="/" className="flex items-center gap-2.5 shrink-0">
           <img 
             src="/Logo-primescore.png" 
             alt="Primescore Business" 

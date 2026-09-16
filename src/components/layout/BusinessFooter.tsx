@@ -15,9 +15,9 @@ export default function BusinessFooter() {
           
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center">
+            <Link href="/" className="flex items-center inline-block">
               <img src="/Logo-primescore.png" alt="Primescore Commercial" className="w-auto" style={{ height: '56px', width: 'auto' }} />
-            </div>
+            </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-textSecondary">
               Verifiable commercial credit audits, registry risk monitoring, and direct dispute drafting support.
             </p>
