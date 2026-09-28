@@ -11,28 +11,8 @@ import Reveal from '../../src/components/ui/Reveal'
 
 import { STATE_CITIES } from '../../src/data/cities'
 
-const ALL_STATES = [
-  "ANDAMAN AND NICOBAR ISLANDS", "ANDHRA PRADESH", "ARUNACHAL PRADESH", "ASSAM", "BIHAR", "CHANDIGARH", 
-  "CHHATTISGARH", "DADRA AND NAGAR HAVELI AND DAMAN AND DIU", "DELHI", "GOA", "GUJARAT", "HARYANA", 
-  "HIMACHAL PRADESH", "JAMMU AND KASHMIR", "JHARKHAND", "KARNATAKA", "KERALA", "LAKSHADWEEP", 
-  "MADHYA PRADESH", "MAHARASHTRA", "MANIPUR", "MEGHALAYA", "MIZORAM", "NAGALAND", "ODISHA", 
-  "PUDUCHERRY", "PUNJAB", "RAJASTHAN", "SIKKIM", "TAMIL NADU", "TELANGANA", "TRIPURA", 
-  "UTTAR PRADESH", "UTTARAKHAND", "WEST BENGAL"
-]
-
-const SEO_CITIES: Record<string, string[]> = {
-  ...STATE_CITIES,
-  "DELHI": STATE_CITIES["DELHI NCR & HARYANA"] || [],
-  "HARYANA": STATE_CITIES["DELHI NCR & HARYANA"] || [],
-  "TELANGANA": STATE_CITIES["TELANGANA & ANDHRA PRADESH"] || [],
-  "ANDHRA PRADESH": STATE_CITIES["TELANGANA & ANDHRA PRADESH"] || [],
-  "PUNJAB": STATE_CITIES["PUNJAB & CHANDIGARH"] || [],
-  "CHANDIGARH": STATE_CITIES["PUNJAB & CHANDIGARH"] || [],
-  "WEST BENGAL": STATE_CITIES["WEST BENGAL & BIHAR"] || [],
-  "BIHAR": STATE_CITIES["WEST BENGAL & BIHAR"] || [],
-  "TAMIL NADU": ["Chennai", "Coimbatore", "Madurai", "Tiruchirappalli", "Salem", "Tiruppur"],
-  "KERALA": ["Kochi", "Thiruvananthapuram", "Kozhikode", "Thrissur"]
-}
+const ALL_STATES = Object.keys(STATE_CITIES).sort()
+const SEO_CITIES: Record<string, string[]> = STATE_CITIES
 
 export default function LocationsPage() {
   const [cityData, setCityData] = useState<Record<string, string[]>>(SEO_CITIES)
