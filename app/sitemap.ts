@@ -1,18 +1,11 @@
 import { MetadataRoute } from 'next'
 import { createClient } from '@supabase/supabase-js'
+import { ALL_CITIES } from '../src/data/cities'
 
 export const dynamic = 'force-static'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-const CITIES = [
-  'Jaipur', 'Jodhpur', 'Kota', 'Bikaner', 'Ajmer', 'Udaipur', 'Bhilwara', 'Alwar',
-  'Bharatpur', 'Sikar', 'Pali', 'Sri Ganganagar', 'Jhunjhunu', 'Chittorgarh', 'Jaisalmer', 'Nagaur',
-  'Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Ahmedabad', 'Chennai', 'Kolkata', 'Surat',
-  'Pune', 'Lucknow', 'Kanpur', 'Indore', 'Thane', 'Bhopal', 'Visakhapatnam', 'Patna',
-  'Vadodara', 'Ghaziabad', 'Ludhiana'
-]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.primescore.in'
@@ -60,8 +53,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   )
 
-  const cityRoutes = CITIES.map(city => ({
-    url: `${baseUrl}/services/credit-rectification/${city.toLowerCase().replace(/\s+/g, '-')}`,
+  const cityRoutes = ALL_CITIES.map(c => ({
+    url: `${baseUrl}/services/credit-rectification/${c.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,

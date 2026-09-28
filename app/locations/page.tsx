@@ -9,6 +9,8 @@ import Navbar from '../../src/components/layout/Navbar'
 import Footer from '../../src/components/layout/Footer'
 import Reveal from '../../src/components/ui/Reveal'
 
+import { STATE_CITIES } from '../../src/data/cities'
+
 const ALL_STATES = [
   "ANDAMAN AND NICOBAR ISLANDS", "ANDHRA PRADESH", "ARUNACHAL PRADESH", "ASSAM", "BIHAR", "CHANDIGARH", 
   "CHHATTISGARH", "DADRA AND NAGAR HAVELI AND DAMAN AND DIU", "DELHI", "GOA", "GUJARAT", "HARYANA", 
@@ -19,21 +21,17 @@ const ALL_STATES = [
 ]
 
 const SEO_CITIES: Record<string, string[]> = {
-  "RAJASTHAN": ["Jaipur", "Jodhpur", "Kota", "Udaipur", "Bikaner", "Ajmer", "Sikar", "Alwar"],
-  "MAHARASHTRA": ["Mumbai", "Pune", "Nagpur", "Thane", "Nashik", "Aurangabad", "Navi Mumbai", "Solapur"],
-  "GUJARAT": ["Ahmedabad", "Surat", "Vadodara", "Rajkot", "Bhavnagar", "Jamnagar", "Gandhinagar"],
-  "DELHI": ["New Delhi", "North Delhi", "South Delhi", "West Delhi", "East Delhi"],
-  "KARNATAKA": ["Bangalore", "Mysore", "Hubli", "Mangalore", "Belgaum", "Gulbarga"],
+  ...STATE_CITIES,
+  "DELHI": STATE_CITIES["DELHI NCR & HARYANA"] || [],
+  "HARYANA": STATE_CITIES["DELHI NCR & HARYANA"] || [],
+  "TELANGANA": STATE_CITIES["TELANGANA & ANDHRA PRADESH"] || [],
+  "ANDHRA PRADESH": STATE_CITIES["TELANGANA & ANDHRA PRADESH"] || [],
+  "PUNJAB": STATE_CITIES["PUNJAB & CHANDIGARH"] || [],
+  "CHANDIGARH": STATE_CITIES["PUNJAB & CHANDIGARH"] || [],
+  "WEST BENGAL": STATE_CITIES["WEST BENGAL & BIHAR"] || [],
+  "BIHAR": STATE_CITIES["WEST BENGAL & BIHAR"] || [],
   "TAMIL NADU": ["Chennai", "Coimbatore", "Madurai", "Tiruchirappalli", "Salem", "Tiruppur"],
-  "UTTAR PRADESH": ["Lucknow", "Kanpur", "Agra", "Varanasi", "Noida", "Ghaziabad", "Bareilly", "Meerut"],
-  "WEST BENGAL": ["Kolkata", "Howrah", "Asansol", "Siliguri", "Durgapur"],
-  "TELANGANA": ["Hyderabad", "Warangal", "Nizamabad", "Karimnagar"],
-  "ANDHRA PRADESH": ["Visakhapatnam", "Vijayawada", "Guntur", "Nellore"],
-  "BIHAR": ["Patna", "Gaya", "Bhagalpur", "Muzaffarpur"],
-  "PUNJAB": ["Ludhiana", "Amritsar", "Jalandhar", "Patiala"],
-  "HARYANA": ["Gurgaon", "Faridabad", "Panipat", "Ambala"],
-  "KERALA": ["Kochi", "Thiruvananthapuram", "Kozhikode", "Thrissur"],
-  "MADHYA PRADESH": ["Indore", "Bhopal", "Jabalpur", "Gwalior"]
+  "KERALA": ["Kochi", "Thiruvananthapuram", "Kozhikode", "Thrissur"]
 }
 
 export default function LocationsPage() {
