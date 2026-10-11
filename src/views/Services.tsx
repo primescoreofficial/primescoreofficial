@@ -276,7 +276,7 @@ export default function Services() {
                 {/* Light Stat Chips */}
                 <div className="grid grid-cols-3 gap-3 pt-1 max-w-lg">
                   <div className="bg-white border border-slate-200/80 rounded-2xl p-3.5 text-center shadow-sm">
-                    <span className="text-[#2563EB] text-lg sm:text-2xl font-black block font-display">50,000+</span>
+                    <span className="text-[#2563EB] text-lg sm:text-2xl font-black block font-display">5,000+</span>
                     <span className="text-slate-500 text-[11px] font-semibold">Reports Audited</span>
                   </div>
                   <div className="bg-white border border-slate-200/80 rounded-2xl p-3.5 text-center shadow-sm">

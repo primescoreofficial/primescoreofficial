@@ -145,6 +145,13 @@ export default function Partner() {
     }
 
     setFormStatus('submitted')
+    
+    // Automatically redirect user to the Google Play Store
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        window.location.href = 'https://play.google.com/store/apps/details?id=in.primescore.partner.twa'
+      }, 1200)
+    }
   }
 
   const faqs = [
@@ -170,7 +177,7 @@ export default function Partner() {
     },
     {
       q: 'How do I download the Partner App or log in to the Web Portal?',
-      a: 'You can download the Android APK directly using the button above or log in directly via browser on https://dashboard.primescore.in/ on any device.'
+      a: 'You can download the Android app directly from the Google Play Store or log in via browser on https://dashboard.primescore.in/ on any device.'
     }
   ]
 
@@ -234,7 +241,9 @@ export default function Partner() {
               
               {/* 1. Google Play Store */}
               <a
-                href="#register"
+                href="https://play.google.com/store/apps/details?id=in.primescore.partner.twa"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-black hover:bg-slate-900 text-white rounded-xl px-4 py-2 border border-slate-700/90 hover:border-slate-500 transition-all flex items-center gap-3 shadow-md active:scale-95 group h-[52px]"
               >
                 <svg className="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -249,21 +258,7 @@ export default function Partner() {
                 </div>
               </a>
 
-              {/* 2. Direct APK Download */}
-              <a
-                href="#register"
-                className="bg-slate-900 hover:bg-slate-800 text-white rounded-xl px-4 py-2 border border-slate-700/90 hover:border-slate-500 transition-all flex items-center gap-3 shadow-md active:scale-95 group h-[52px]"
-              >
-                <div className="w-6 h-6 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
-                  <Download className="w-3.5 h-3.5" />
-                </div>
-                <div className="text-left leading-tight">
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-emerald-400 block">DIRECT INSTALL</span>
-                  <span className="text-xs sm:text-sm font-extrabold text-white tracking-tight">Download APK</span>
-                </div>
-              </a>
-
-              {/* 3. Web Dashboard */}
+              {/* 2. Web Dashboard */}
               <a
                 href="https://dashboard.primescore.in/"
                 target="_blank"
@@ -277,6 +272,15 @@ export default function Partner() {
                   <span className="text-[9px] font-bold uppercase tracking-wider text-sky-400 block">BROWSER ACCESS</span>
                   <span className="text-xs sm:text-sm font-extrabold text-white tracking-tight">Web Portal</span>
                 </div>
+              </a>
+
+              {/* 3. Register Form anchor button */}
+              <a
+                href="#register"
+                className="bg-blue-600 hover:bg-blue-500 text-white rounded-xl px-5 py-2 border border-blue-500 transition-all flex items-center gap-2 shadow-md active:scale-95 group h-[52px]"
+              >
+                <span className="text-xs sm:text-sm font-extrabold text-white tracking-tight">Register as Partner</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </a>
 
             </div>
@@ -422,7 +426,9 @@ export default function Partner() {
                 </div>
 
                 <a
-                  href="#register"
+                  href="https://play.google.com/store/apps/details?id=in.primescore.partner.twa"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs sm:text-sm py-3.5 px-6 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 active:scale-95"
                 >
                   <span>Claim Partner Account</span>
@@ -515,7 +521,9 @@ export default function Partner() {
               </div>
             </div>
             <a
-              href="#register"
+              href="https://play.google.com/store/apps/details?id=in.primescore.partner.twa"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-colors shrink-0 shadow-sm"
             >
               Start Earning Vouchers
@@ -815,7 +823,7 @@ export default function Partner() {
                 Join the Partner Referral Program
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                Register in 60 seconds to download the Partner APK and access the web portal.
+                Register in 60 seconds to access the Partner Portal and download the App on Google Play Store.
               </p>
             </div>
 
@@ -824,9 +832,17 @@ export default function Partner() {
                 <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
                 <h3 className="text-lg font-bold text-slate-900">Application Submitted</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Thank you for registering. Our partner alliances desk will contact you via WhatsApp with your APK download link and portal login credentials.
+                  Thank you for registering! Your application has been received. Redirecting you to the Google Play Store to install the Primescore Partner App...
                 </p>
-                <div className="pt-2">
+                <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=in.primescore.partner.twa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 bg-black hover:bg-slate-900 text-white font-bold text-xs px-5 py-2.5 rounded-lg transition-colors border border-slate-800"
+                  >
+                    <span>Download on Google Play</span>
+                  </a>
                   <a
                     href="https://dashboard.primescore.in/"
                     target="_blank"
@@ -934,7 +950,7 @@ export default function Partner() {
                     <span>Submitting Registration...</span>
                   ) : (
                     <>
-                      <span>Get Partner Access &amp; Download APK</span>
+                      <span>Register &amp; Get Partner Access</span>
                       <ArrowRight className="w-4 h-4" />
                     </>
                   )}
